@@ -53,7 +53,7 @@
         {% block content_div_start %}<div class="content">{% endblock content_div_start %}
             {% block page_header %}
             <div class="page-header">
-                  <h1>{% block headline %}Mopa Bootstrap Bundle{% endblock headline %}</h1>
+                  <h1>{% block headline %}Internetowy sklep z filmami{% endblock headline %}</h1>
             </div>
             {% endblock page_header %}
 
@@ -78,12 +78,12 @@
                     {% block content_sidebar %}
                    <div class="bs-example" data-example-id="simple-nav-stacked">
                     <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-                      <li role="presentation" class="active"><a href="#">Strona główna</a></li>
+                      <li role="presentation" class="active"><a href="{{ path('movie') }}">Strona główna</a></li>
                       <li role="presentation"><a href="#">Zamówienia</a></li>
                       <li class="divider"></li>
-                      <li role="presentation"><a href="#">Logowanie</a></li>
+                      <li role="presentation"><a href="{{ path('fos_user_security_login') }}">Logowanie</a></li>
 
-                      <li role="presentation"><a href="#">Rejestracja</a></li>
+                      <li role="presentation"><a href="{{ path('fos_user_registration_register') }}">Rejestracja</a></li>
                       <li role="presentation"><a href="{{ path('movie_new') }}">Dodaj film</a></li>
                       
                     </ul>

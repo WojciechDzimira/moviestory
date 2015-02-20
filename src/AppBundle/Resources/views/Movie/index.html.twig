@@ -4,7 +4,7 @@
 
     <div class="thumbnail col-md-7">
         <a href="#">
-            <img class="img-responsive" src="http://lorempixel.com/450/250/?random=90 " alt="">
+            <img class="img-responsive" src="http://lorempixel.com/450/200/?random=90 " alt="">
         </a>
         <div class="caption post-content">
             <h4> {{ entity.title }} </h4>
@@ -24,12 +24,13 @@
         <p>{{ entity.info }}</p>
         <a class="btn btn-success" href="" data-toggle="modal" data-target="#zamowienie_new">
             Zakup <span class="glyphicon glyphicon-chevron-right"></span></a>
-            <a class="btn btn-info btn-xs pull-right" href="{{ path('movie_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-cog"></span> Edytuj</a>
-     
+            {% if is_granted('ROLE_USER') %}
+
+            <a class="btn btn-info btn-xs pull-right" href="{{ path('movie_edit', { 'id': entity.id }) }}">
+                <span class="glyphicon glyphicon-cog"></span> Edytuj</a>
+
+    {% endif %}
     </div>
 </div>
 
-{% endfor %}
-
-
-{% endblock %}
+{% endfor %} {% endblock %}
