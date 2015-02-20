@@ -75,7 +75,15 @@
                 </div>
                 <div class="col-sm-3">
                     {% block content_sidebar %}
-                    <h2>Sidebar</h2>
+                   <div class="bs-example" data-example-id="simple-nav-stacked">
+                    <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+                      <li role="presentation" class="active"><a href="#">Strona główna</a></li>
+                      <li role="presentation"><a href="#">Zamówienia</a></li>
+                      <li class="divider"></li>
+                      <li role="presentation"><a href="#">Logowanie</a></li>
+                      <li role="presentation"><a href="#">Rejestracja</a></li>
+                    </ul>
+                  </div>
                     {% endblock content_sidebar %}
                 </div>
                 {% endblock content %}
