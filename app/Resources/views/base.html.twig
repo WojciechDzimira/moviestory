@@ -12,6 +12,7 @@
 {% block head_style %}
    
     <link href="{{ asset('bundles/mopabootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" media="screen" />
+    <link href="{{ asset('bundles/mopabootstrap/css/style.css') }}" type="text/css" rel="stylesheet" media="screen" />
     
     {% endblock head_style %}
 
@@ -81,7 +82,10 @@
                       <li role="presentation"><a href="#">Zamówienia</a></li>
                       <li class="divider"></li>
                       <li role="presentation"><a href="#">Logowanie</a></li>
+
                       <li role="presentation"><a href="#">Rejestracja</a></li>
+                      <li role="presentation"><a href="{{ path('movie_new') }}">Dodaj film</a></li>
+                      
                     </ul>
                   </div>
                     {% endblock content_sidebar %}

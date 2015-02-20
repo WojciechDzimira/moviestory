@@ -13,7 +13,7 @@ use AppBundle\Form\MovieType;
 /**
  * Movie controller.
  *
- * @Route("/movie")
+ * @Route("/")
  */
 class MovieController extends Controller
 {
@@ -102,7 +102,7 @@ class MovieController extends Controller
     /**
      * Finds and displays a Movie entity.
      *
-     * @Route("/{id}", name="movie_show")
+     * @Route("/movie/{id}", name="movie_show")
      * @Method("GET")
      * @Template()
      */
@@ -172,7 +172,7 @@ class MovieController extends Controller
     /**
      * Edits an existing Movie entity.
      *
-     * @Route("/{id}", name="movie_update")
+     * @Route("/movie/{id}", name="movie_update")
      * @Method("PUT")
      * @Template("AppBundle:Movie:edit.html.twig")
      */
@@ -205,7 +205,7 @@ class MovieController extends Controller
     /**
      * Deletes a Movie entity.
      *
-     * @Route("/{id}", name="movie_delete")
+     * @Route("/movie/{id}", name="movie_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, $id)
