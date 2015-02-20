@@ -1,4 +1,5 @@
 /*!
+<<<<<<< HEAD
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -22,12 +23,26 @@
  *  Email: dave@fontawesome.io
  *  Twitter: http://twitter.com/davegandy
  *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+=======
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+>>>>>>> bundles
  */
 
 @import "variables";
 @import "mixins";
 @import "path";
 @import "core";
+<<<<<<< HEAD
 @import "bootstrap";
 @import "extras";
+=======
+@import "larger";
+@import "fixed-width";
+@import "list";
+@import "bordered-pulled";
+@import "spinning";
+@import "rotated-flipped";
+@import "stacked";
+>>>>>>> bundles
 @import "icons";

@@ -17,14 +17,22 @@
  */
 
 // variables
+<<<<<<< HEAD
 $iconSpritePath:        "/bundles/mopabootstrap/img/glyphicons-halflings.png";
 $iconWhiteSpritePath:   "/bundles/mopabootstrap/img/glyphicons-halflings-white.png";
+=======
+$icon-font-path: "/bundles/mopabootstrap/fonts/bootstrap/" !default;
+>>>>>>> bundles
 
 // Bootstrap overrides, such as the asset-url(..) function.
 @import "bootstrap_and_overrides";
 
 // Main bootstrap.sass entry point
+<<<<<<< HEAD
 @import "../../bootstrap-sass/lib/bootstrap.scss";
+=======
+@import "../bootstrap-sass/assets/stylesheets/bootstrap/bootstrap";
+>>>>>>> bundles
 
 // The Paginator less for MopaBootstrapBundle
 @import "paginator.scss";
@@ -34,6 +42,9 @@ $iconWhiteSpritePath:   "/bundles/mopabootstrap/img/glyphicons-halflings-white.p
 
 // FormFlow support for MopaBootstrapBundle
 @import "form_flow.scss";
+<<<<<<< HEAD
 
 // include the responsive after all of your stuff!
 // @import "../../bootstrap-sass/lib/responsive.scss";
+=======
+>>>>>>> bundles

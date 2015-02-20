@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*!
+=======
+/*
+>>>>>>> bundles
  * MopaBootstrapBundle
  *
  * Copyright 2011 Mohrenweiser & Partner
@@ -12,8 +16,16 @@
  *  (maybe pathes must be adapted in that case)
  */
 
+<<<<<<< HEAD
 // Main bootstrap.less entry point
 @import "../../bootstrap/bootstrap.css";
 
 // The Example css for this bundle
 @import "../path/to/your/example.css"; 
+=======
+/* Main bootstrap.less entry point */
+@import "../bootstrap/bootstrap.css";
+
+/* The Example css for this bundle */
+@import "../path/to/your/example.css"; 
+>>>>>>> bundles
