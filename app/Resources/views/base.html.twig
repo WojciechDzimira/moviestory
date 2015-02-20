@@ -26,7 +26,7 @@
      
     {% endblock head_script %}
 
-    <title>{% block title %}Mopa Bootstrap Bundle{% endblock title %}</title>
+    <title>{% block title %}Sklep{% endblock title %}</title>
     {% block favicon %}<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />{% endblock %}
     {% block head_bottom %}
     {% endblock head_bottom %}
@@ -85,6 +85,8 @@
 
                       <li role="presentation"><a href="{{ path('fos_user_registration_register') }}">Rejestracja</a></li>
                       <li role="presentation"><a href="{{ path('movie_new') }}">Dodaj film</a></li>
+                      <li role="presentation"><a href="{{ path('fos_user_security_logout') }}">Wyloguj</a></li>
+
                       
                     </ul>
                   </div>

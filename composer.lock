@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ac26671cedaf0e8e35df34157da8760",
+    "hash": "945103da1e11fa874086a96e810a1278",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1686,12 +1686,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "ed627ebcfb8ad38db36f7e69b335a311a9c44444"
+                "reference": "504435e0b07e6c638df995959bb1f0a4a182ceca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/ed627ebcfb8ad38db36f7e69b335a311a9c44444",
-                "reference": "ed627ebcfb8ad38db36f7e69b335a311a9c44444",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/504435e0b07e6c638df995959bb1f0a4a182ceca",
+                "reference": "504435e0b07e6c638df995959bb1f0a4a182ceca",
                 "shasum": ""
             },
             "replace": {
@@ -1729,7 +1729,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2015-02-19 04:21:09"
+            "time": "2015-02-20 00:14:06"
         },
         {
             "name": "twig/extensions",
@@ -1899,7 +1899,6 @@
         "twbs/bootstrap": 20
     },
     "prefer-stable": false,
-    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.3"
     },
