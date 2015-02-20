@@ -30,36 +30,36 @@ class PurchaseController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('AppBundle:Purchase')->findAll();
-
+        $movies = $em->getRepository('AppBundle:Movie')->findAll();
+        $users = $em->getRepository('AppBundle:User')->findAll();
         return array(
             'entities' => $entities,
+            'movies' => $movies,
+            'users' => $users,
+            'id' => (empty($_GET['id']))?1:$_GET['id']
         );
     }
     /**
      * Creates a new Purchase entity.
      *
-     * @Route("/", name="purchase_create")
-     * @Method("POST")
+     * @Route("/{id}/new", name="purchase_create")
+     * @Method("GET")
      * @Template("AppBundle:Purchase:new.html.twig")
      */
-    public function createAction(Request $request)
+    public function createAction($id)
     {
         $entity = new Purchase();
-        $form = $this->createCreateForm($entity);
-        $form->handleRequest($request);
+        $entity->setMovieId($id);
+        $entity->setUserId($this->getUser()->getId());
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($entity);
+        $em->flush();
 
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($entity);
-            $em->flush();
+        return $this->redirect(
+            $this->generateUrl('purchase', array('id' => $entity->getId())
+                ));
+    
 
-            return $this->redirect($this->generateUrl('purchase_show', array('id' => $entity->getId())));
-        }
-
-        return array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        );
     }
 
     /**

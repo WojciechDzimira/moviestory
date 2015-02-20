@@ -80,7 +80,7 @@ mopa_bootstrap:
         templating: false # default is true
         render_fieldset: true # default is true
         render_collection_item: true # default is true
-        show_legend: true # default is true
+        show_legend: false # default is true
         show_child_legend: true # default is false
         render_required_asterisk: true # default is false
         render_optional_text: false # default is true

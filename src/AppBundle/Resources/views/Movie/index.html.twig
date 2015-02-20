@@ -22,7 +22,7 @@
 
         <h4>Cena ${{ entity.price }}</h4>
         <p>{{ entity.info }}</p>
-        <a class="btn btn-success" href="" data-toggle="modal" data-target="#zamowienie_new">
+        <a class="btn btn-success" href="{{ path('purchase_create', { 'id': entity.id }) }}" >
             Zakup <span class="glyphicon glyphicon-chevron-right"></span></a>
             {% if is_granted('ROLE_USER') %}
 
