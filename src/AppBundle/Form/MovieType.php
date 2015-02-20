@@ -16,8 +16,15 @@ class MovieType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('info')
-            ->add('price')
+            ->add('info', null, array(
+                "attr"=>array("rows" => 10),
+                "label"=>"Podaj opis filmu"
+            ))
+            ->add('price', null, array(
+            "widget_addon_prepend" => array(
+                "icon"     => "euro",
+            )
+            ))
         ;
     }
     
