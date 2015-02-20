@@ -10,25 +10,19 @@
 <head>
     <meta charset="{{ _charset }}" />
 {% block head_style %}
-    {% stylesheets filter='cssrewrite,?yui_css'
-       '@MopaBootstrapBundle/Resources/public/bootstrap/bootstrap.css'
-
-    %}
-    <link href="{{ asset_url }}" type="text/css" rel="stylesheet"
-       media="screen" />
-    {% endstylesheets %}
+   
+    <link href="{{ asset('bundles/mopabootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" media="screen" />
+    
     {% endblock head_style %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% block head_script %}
-    {# Overwrite this block to add your own js here, to get them generated into final files
-    {% javascripts
-        'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
-    %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-     #}
+    {# Overwrite this block to add your own js here, to get them generated into final files#}
+    
+    <script type="text/javascript" src="{{ asset('bundles/mopabootstrap/js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/mopabootstrap/js/bootstrap.js') }}"></script>
+     
     {% endblock head_script %}
 
     <title>{% block title %}Mopa Bootstrap Bundle{% endblock title %}</title>
@@ -77,7 +71,6 @@
                 {% block content %}
                 <div class="col-sm-9">
                     {% block content_content %}
-                    <strong>Hier könnte Ihre Werbung stehen ... </strong>
                     {% endblock content_content %}
                 </div>
                 <div class="col-sm-3">
@@ -96,7 +89,7 @@
         {% endblock footer_tag_start %}
 
         {% block footer %}
-        <p>&copy; <a href="http://www.mohrenweiserpartner.de" target="_blank">Mohrenweiser & Partner</a> 2011-2013</p>
+        <p>(c) 2015</p>
         {% endblock footer %}
 
         {% block footer_tag_end %}

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block content_content %}asdasd
+{% block content_content %}
         <div>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
