@@ -4,7 +4,7 @@
 
     <div class="thumbnail col-md-7">
         <a href="#">
-            <img class="img-responsive" src="{{ entity.image }}" alt="">
+            <img class="img-responsive" src="http://lorempixel.com/450/200/?random=90 " alt="">
         </a>
         <div class="caption post-content">
             <h4> {{ entity.title }} </h4>
@@ -21,10 +21,7 @@
         </ul>
 
         <h4>Cena ${{ entity.price }}</h4>
-        <p>{{ entity.year }}</p>
-		<p>{{ entity.director }}</p>
-		<p>{{ entity.genre }}</p>
-		<p>{{ entity.info }}</p>
+        <p>{{ entity.info }}</p>
         <a class="btn btn-success" href="{{ path('purchase_create', { 'id': entity.id }) }}" >
             Zakup <span class="glyphicon glyphicon-chevron-right"></span></a>
             {% if is_granted('ROLE_USER') %}
