@@ -1,6 +1,8 @@
 <?php
 namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+
 /**
  * Movie
  *
@@ -23,29 +25,64 @@ class Movie
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
-    /**
+    
+	 /**
+     * @var string
+     *
+     * @ORM\Column(name="genre", type="string", length=255)
+     */
+    private $genre;
+	
+	/**
      * @var string
      *
      * @ORM\Column(name="info", type="text")
      */
-     private $linkURL;
+    private $info;
+    
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="year", type="string", length=4)
+     */
+    private $year;
+
     /**
      * @var string
      *
-     * @ORM\Column(name="linkURL", type="text")
+     * @ORM\Column(name="director", type="string", length=255)
      */
-    private $info;
-    /**
+    private $director;
+	
+	 /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255)
+     */
+    private $image;
+	
+	/**
      * @var string
      *
      * @ORM\Column(name="price", type="decimal")
      */
-    private $price;
+    
+	private $price;
     /**
      * Get id
      *
      * @return integer 
      */
+	 
+	/**
+	* @var string $slug
+	*
+	* @Gedmo\Slug(fields={"tytul"})
+	* @ORM\Column(length=20)
+	*/
+	private $slug;
+	
+	
     public function getId()
     {
         return $this->id;
@@ -69,27 +106,6 @@ class Movie
     public function getTitle()
     {
         return $this->title;
-    }
-    
-    /**
-     * Set URL
-     *
-     * @param string $linkURL
-     * @return Movie
-     */
-    public function setURL($linkURL)
-    {
-        $this->URL = $linkURL;
-        return $this;
-    }
-    /**
-     * Get URL
-     *
-     * @return string 
-     */
-    public function getURL()
-    {
-        return $this->URL;
     }
     /**
      * Set info
