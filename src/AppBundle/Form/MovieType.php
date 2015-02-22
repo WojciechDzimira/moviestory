@@ -20,6 +20,10 @@ class MovieType extends AbstractType
                 "attr"=>array("rows" => 10),
                 "label"=>"Podaj opis filmu"
             ))
+			->add('year')
+			->add('director')
+			->add('genre')
+			->add('image')
             ->add('price', null, array(
             "widget_addon_prepend" => array(
                 "icon"     => "euro",
