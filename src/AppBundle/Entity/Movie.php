@@ -1,7 +1,7 @@
 <?php
 namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
+
 
 /**
  * Movie
@@ -74,12 +74,7 @@ class Movie
      * @return integer 
      */
 	 
-	/**
-	* @var string $slug
-	*
-	* @Gedmo\Slug(fields={"title"})
-	* @ORM\Column(length=20)
-	*/
+	
 	private $slug;
 	
 	
