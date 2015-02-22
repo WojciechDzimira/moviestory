@@ -77,7 +77,7 @@ class Movie
 	/**
 	* @var string $slug
 	*
-	* @Gedmo\Slug(fields={"tytul"})
+	* @Gedmo\Slug(fields={"title"})
 	* @ORM\Column(length=20)
 	*/
 	private $slug;
