@@ -3,11 +3,11 @@
 <div class="row">
 
     <div class="thumbnail col-md-7">
-        <a href="#">
+        <a href="{{ path('movie_show', { 'id': entity.id }) }}">
             <img class="img-responsive" src="{{ entity.image }}" alt="">
         </a>
         <div class="caption post-content">
-            <h4> {{ entity.title }} </h4>
+            <h4> <a href="{{ path('movie_show', { 'id': entity.id }) }}"> {{ entity.title }} </a></h4>
         </div>
     </div>
     <div class="col-md-5">
@@ -16,7 +16,7 @@
             <li><a href="{{ path('movie')}}">Filmy</a>
                 <span class="divider">/</span>
             </li>
-            <li class="active"> <strong>{{ entity.title }} </strong>
+            <li class="active"> <a href="{{ path('movie_show', { 'id': entity.id }) }}"> <strong>{{ entity.title }} </strong></a>
             </li>
         </ul>
 
