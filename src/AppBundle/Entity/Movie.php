@@ -1,6 +1,7 @@
 <?php
 namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Movie
  *
@@ -23,23 +24,57 @@ class Movie
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
-    /**
+    
+	 /**
+     * @var string
+     *
+     * @ORM\Column(name="genre", type="string", length=255)
+     */
+    private $genre;
+	
+	/**
      * @var string
      *
      * @ORM\Column(name="info", type="text")
      */
     private $info;
+    
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="year", type="string", length=4)
+     */
+    private $year;
+
     /**
+     * @var string
+     *
+     * @ORM\Column(name="director", type="string", length=255)
+     */
+    private $director;
+	
+	 /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255)
+     */
+    private $image;
+	
+	/**
      * @var string
      *
      * @ORM\Column(name="price", type="decimal")
      */
-    private $price;
+    
+	private $price;
     /**
      * Get id
      *
      * @return integer 
      */
+
+	
+	
     public function getId()
     {
         return $this->id;
