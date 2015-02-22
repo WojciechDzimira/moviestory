@@ -1,8 +1,7 @@
 <?php
-
 namespace AppBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Movie
@@ -20,39 +19,74 @@ class Movie
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
     /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
-
-    /**
+    
+	 /**
+     * @var string
+     *
+     * @ORM\Column(name="genre", type="string", length=255)
+     */
+    private $genre;
+	
+	/**
      * @var string
      *
      * @ORM\Column(name="info", type="text")
      */
     private $info;
+    
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="year", type="string", length=4)
+     */
+    private $year;
 
     /**
      * @var string
      *
+     * @ORM\Column(name="director", type="string", length=255)
+     */
+    private $director;
+	
+	 /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255)
+     */
+    private $image;
+	
+	/**
+     * @var string
+     *
      * @ORM\Column(name="price", type="decimal")
      */
-    private $price;
-
-
+    
+	private $price;
     /**
      * Get id
      *
      * @return integer 
      */
+	 
+	/**
+	* @var string $slug
+	*
+	* @Gedmo\Slug(fields={"tytul"})
+	* @ORM\Column(length=20)
+	*/
+	private $slug;
+	
+	
     public function getId()
     {
         return $this->id;
     }
-
     /**
      * Set title
      *
@@ -62,10 +96,8 @@ class Movie
     public function setTitle($title)
     {
         $this->title = $title;
-
         return $this;
     }
-
     /**
      * Get title
      *
@@ -75,7 +107,6 @@ class Movie
     {
         return $this->title;
     }
-
     /**
      * Set info
      *
@@ -85,10 +116,8 @@ class Movie
     public function setInfo($info)
     {
         $this->info = $info;
-
         return $this;
     }
-
     /**
      * Get info
      *
@@ -98,7 +127,6 @@ class Movie
     {
         return $this->info;
     }
-
     /**
      * Set price
      *
@@ -108,10 +136,8 @@ class Movie
     public function setPrice($price)
     {
         $this->price = $price;
-
         return $this;
     }
-
     /**
      * Get price
      *
