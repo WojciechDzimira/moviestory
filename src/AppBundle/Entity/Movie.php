@@ -32,7 +32,7 @@ class Movie
     /**
      * @var string
      *
-     * @ORM\Column(name="info", type="text")
+     * @ORM\Column(name="URL", type="text")
      */
 	 
     private $info;
