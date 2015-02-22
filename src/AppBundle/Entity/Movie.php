@@ -28,6 +28,12 @@ class Movie
      *
      * @ORM\Column(name="info", type="text")
      */
+     private $linkURL;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="linkURL", type="text")
+     */
     private $info;
     /**
      * @var string
@@ -63,6 +69,27 @@ class Movie
     public function getTitle()
     {
         return $this->title;
+    }
+    
+    /**
+     * Set URL
+     *
+     * @param string $linkURL
+     * @return Movie
+     */
+    public function setURL($linkURL)
+    {
+        $this->URL = $linkURL;
+        return $this;
+    }
+    /**
+     * Get URL
+     *
+     * @return string 
+     */
+    public function getURL()
+    {
+        return $this->URL;
     }
     /**
      * Set info
